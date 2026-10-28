@@ -3,10 +3,10 @@
 // Allows SMEs to review their verified records, track missing items,
 // and export a structured financial dossier without submitting a real loan.
 // ============================================================
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   FileText, CheckCircle2, AlertTriangle, XCircle,
-  Download, ArrowRight, ShieldCheck, Printer, Check,
+  Download, ArrowRight, Check,
 } from 'lucide-react';
 import type { LoanApplicationChecklist, ChecklistItem } from '../types';
 
@@ -18,7 +18,6 @@ interface LoanChecklistCardProps {
 
 export function LoanChecklistCard({
   checklist,
-  onNavigate,
   onSubmitQuery,
 }: LoanChecklistCardProps) {
   const [items, setItems] = useState<ChecklistItem[]>(checklist.items);

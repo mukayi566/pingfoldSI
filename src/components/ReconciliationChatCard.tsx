@@ -3,12 +3,12 @@
 // Displays automated transaction reconciliation with filters,
 // expandable records, discrepancy highlights, and export.
 // ============================================================
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Zap, CheckCircle2, AlertTriangle, XCircle,
-  FileSpreadsheet, Download, ArrowRight, ExternalLink, Filter,
+  Download, ArrowRight,
 } from 'lucide-react';
-import type { ReconciliationResult, MatchStatus } from '../types';
+import type { ReconciliationResult } from '../types';
 
 interface ReconciliationChatCardProps {
   result: ReconciliationResult;

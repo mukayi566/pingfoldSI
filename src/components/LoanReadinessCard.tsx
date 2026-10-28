@@ -3,11 +3,11 @@
 // Interactive in-chat component showing credit intelligence,
 // deterministic DSCR calculations, strengths, constraints & gaps.
 // ============================================================
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
-  Landmark, ShieldCheck, AlertCircle, CheckCircle2,
-  TrendingUp, FileText, ArrowRight, Calculator,
-  ChevronDown, ChevronUp, Scale, AlertTriangle,
+  Landmark, CheckCircle2,
+  ArrowRight, Calculator,
+  AlertTriangle,
 } from 'lucide-react';
 import type { LoanReadinessAssessment } from '../types';
 
@@ -19,10 +19,9 @@ interface LoanReadinessCardProps {
 
 export function LoanReadinessCard({
   assessment,
-  onNavigate,
   onSubmitQuery,
 }: LoanReadinessCardProps) {
-  const [showDetails, setShowDetails] = useState(false);
+  const [] = useState(false);
 
   const isStrong = assessment.readinessScore >= 80;
   const isModerate = assessment.readinessScore >= 65 && assessment.readinessScore < 80;

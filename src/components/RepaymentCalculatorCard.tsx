@@ -3,10 +3,9 @@
 // Provides real-time compound amortization calculation,
 // sliders for principal, tenure, and APR, and cash-flow affordability checks.
 // ============================================================
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Calculator, CheckCircle2, AlertTriangle, ArrowRight,
-  TrendingUp, Shield, Info, RefreshCw,
 } from 'lucide-react';
 import type { RepaymentScenario } from '../types';
 import { calculateRepaymentScenario } from '../lib/creditEngine';
@@ -19,7 +18,6 @@ interface RepaymentCalculatorCardProps {
 
 export function RepaymentCalculatorCard({
   initialScenario,
-  onNavigate,
   onSubmitQuery,
 }: RepaymentCalculatorCardProps) {
   const [principal, setPrincipal] = useState<number>(initialScenario.principal || 50000);
