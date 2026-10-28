@@ -9,21 +9,11 @@ import type {
   ChatMessage,
   AgentSessionContext,
   AnalysisLanguage,
-  DetectedIntent,
-  IntentType,
-  ReconciliationResult,
-  BusinessFinancialProfile,
-  CashFlowSummary,
-  LoanReadinessAssessment,
-  RepaymentScenario,
-  FinancingProduct,
-  LoanApplicationChecklist,
   PaymentFormData,
 } from '../types';
 import {
   getBusinessFinancialProfile,
   calculateCashFlow,
-  calculateDebtObligations,
   calculateLoanReadiness,
   calculateRepaymentScenario,
   discoverFinancingProducts,
@@ -84,10 +74,9 @@ export class AgentOrchestrator {
   public async processUserMessage(
     input: string,
     language: AnalysisLanguage = 'en',
-    attachedFilesCount = 0
+    _attachedFilesCount = 0
   ): Promise<OrchestrationResult> {
     const trimmed = input.trim();
-    const lower = trimmed.toLowerCase();
 
     // ─────────────────────────────────────────────────────────────
     // 1. URLs & Firecrawl Suspicious Link Check

@@ -31,41 +31,11 @@ const EVENT_CONFIG: Record<AuditEventType, { label: string; icon: (props: React.
   firecrawl_link_investigation: { label: 'Firecrawl link investigation', icon: (p) => <Shield {...p} />, color: 'var(--pf-danger)' },
   firecrawl_supplier_research: { label: 'Firecrawl supplier research', icon: (p) => <BarChart3 {...p} />, color: 'var(--pf-blue)' },
   firecrawl_guidance_lookup: { label: 'Official guidance lookup', icon: (p) => <Landmark {...p} />, color: 'var(--pf-success)' },
-  credit_assessment_run: {
-    label: '',
-    icon: function (): React.ReactNode {
-      throw new Error('Function not implemented.');
-    },
-    color: ''
-  },
-  cash_flow_analyzed: {
-    label: '',
-    icon: function (_props: React.SVGProps<SVGSVGElement>): React.ReactNode {
-      throw new Error('Function not implemented.');
-    },
-    color: ''
-  },
-  repayment_scenario_calculated: {
-    label: '',
-    icon: function (_props: React.SVGProps<SVGSVGElement>): React.ReactNode {
-      throw new Error('Function not implemented.');
-    },
-    color: ''
-  },
-  financing_products_compared: {
-    label: '',
-    icon: function (_props: React.SVGProps<SVGSVGElement>): React.ReactNode {
-      throw new Error('Function not implemented.');
-    },
-    color: ''
-  },
-  loan_checklist_generated: {
-    label: '',
-    icon: function (): React.ReactNode {
-      throw new Error('Function not implemented.');
-    },
-    color: ''
-  }
+  credit_assessment_run:         { label: 'Credit assessment run',          icon: (p) => <CheckCircle2 {...p} />, color: 'var(--pf-blue)' },
+  cash_flow_analyzed:            { label: 'Cash flow analyzed',             icon: (p) => <BarChart3 {...p} />,    color: 'var(--pf-success)' },
+  repayment_scenario_calculated: { label: 'Repayment scenario calculated',  icon: (p) => <Send {...p} />,         color: '#8A2BE2' },
+  financing_products_compared:   { label: 'Financing products compared',    icon: (p) => <Landmark {...p} />,     color: 'var(--pf-warning)' },
+  loan_checklist_generated:      { label: 'Loan checklist generated',       icon: (p) => <FileText {...p} />,     color: 'var(--pf-success)' },
 };
 
 const OUTCOME_BADGES: Record<AuditEvent['outcome'], { label: string; variant: 'success' | 'danger' | 'warning' | 'neutral' }> = {

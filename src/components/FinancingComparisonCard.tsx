@@ -3,10 +3,12 @@
 // Interactive in-chat component comparing verified Zambian
 // SME loan products (Zanaco, Absa, CEEC, FNB) without inventing rates.
 // ============================================================
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
-  Landmark, Building2, CheckCircle2, ExternalLink,
-  Calculator, ArrowRight, ShieldCheck, Clock, Percent,
+  Building2,
+  Calculator, ArrowRight, ShieldCheck,
+  CheckCircle2,
+  ExternalLink,
 } from 'lucide-react';
 import type { FinancingProduct } from '../types';
 
@@ -20,7 +22,7 @@ interface FinancingComparisonCardProps {
 export function FinancingComparisonCard({
   products,
   targetAmount = 50000,
-  onNavigate,
+  onNavigate: _onNavigate,
   onSubmitQuery,
 }: FinancingComparisonCardProps) {
   const [selectedProductId, setSelectedProductId] = useState<string>(products[0]?.id || '');

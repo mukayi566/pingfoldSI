@@ -1,11 +1,11 @@
 // ============================================================
 // PingFold AI – Inline Cash Flow & Operating Profile Card
 // ============================================================
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   BarChart3, Landmark, ArrowUpRight, ArrowDownRight,
-  Calendar, CheckCircle2, AlertTriangle, TrendingUp,
-  FileText, ChevronDown, ChevronUp, ArrowRight,
+  AlertTriangle, TrendingUp,
+  ChevronDown, ChevronUp, ArrowRight,
 } from 'lucide-react';
 import type { CashFlowSummary, BusinessFinancialProfile } from '../types';
 
@@ -19,7 +19,7 @@ interface CashFlowCardProps {
 export function CashFlowCard({
   cashFlow,
   profile,
-  onNavigate,
+  onNavigate: _onNavigate,
   onSubmitQuery,
 }: CashFlowCardProps) {
   const [showHistory, setShowHistory] = useState(false);

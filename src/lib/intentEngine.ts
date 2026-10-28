@@ -70,6 +70,48 @@ const INTENT_PATTERNS: IntentPattern[] = [
       /^(hi|hello|hey|muli|muli\s*shani|mwapoleni|shani|mwashibukeni|muli\s*bwanji|monse|bwino|salibonani|good\s*(morning|afternoon|evening)|what can you|how.*help|help me)[\s!.?]*$/i,
     ],
   },
+  {
+    type: 'credit',
+    weight: 12,
+    patterns: [
+      /loan.*readiness|credit.*assessment|prepare.*loan|qualify.*loan|creditworthiness|sme.*loan|need.*loan/i,
+    ],
+  },
+  {
+    type: 'cash_flow',
+    weight: 12,
+    patterns: [
+      /cash\s*flow|operating.*ledger|liquid.*cash|cash.*inflow|cash.*outflow|operating.*surplus/i,
+    ],
+  },
+  {
+    type: 'reconciliation',
+    weight: 12,
+    patterns: [
+      /reconcil|unmatched.*transaction|matched.*order|discrepancy.*reason/i,
+    ],
+  },
+  {
+    type: 'repayment_calc',
+    weight: 12,
+    patterns: [
+      /repayment.*scenario|calculate.*repayment|simulate.*repayment|monthly.*installment|repayment.*period/i,
+    ],
+  },
+  {
+    type: 'loan_checklist',
+    weight: 12,
+    patterns: [
+      /loan.*checklist|application.*checklist|prepare.*application|loan.*dossier|document.*checklist/i,
+    ],
+  },
+  {
+    type: 'financing_discovery',
+    weight: 12,
+    patterns: [
+      /financing.*option|compare.*loan|compare.*financing|lender.*product|find.*financing|verified.*financing/i,
+    ],
+  },
 ];
 
 export function detectIntent(text: string): DetectedIntent {
@@ -81,6 +123,12 @@ export function detectIntent(text: string): DetectedIntent {
     activity: 0,
     settings: 0,
     greeting: 0,
+    credit: 0,
+    cash_flow: 0,
+    reconciliation: 0,
+    repayment_calc: 0,
+    loan_checklist: 0,
+    financing_discovery: 0,
     unclear: 0,
   };
 
