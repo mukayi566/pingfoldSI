@@ -47,21 +47,21 @@ const EVENT_CONFIG: Record<AuditEventType, { label: string; icon: (props: React.
   },
   repayment_scenario_calculated: {
     label: '',
-    icon: function (props: React.SVGProps<SVGSVGElement>): React.ReactNode {
+    icon: function (_props: React.SVGProps<SVGSVGElement>): React.ReactNode {
       throw new Error('Function not implemented.');
     },
     color: ''
   },
   financing_products_compared: {
     label: '',
-    icon: function (props: React.SVGProps<SVGSVGElement>): React.ReactNode {
+    icon: function (_props: React.SVGProps<SVGSVGElement>): React.ReactNode {
       throw new Error('Function not implemented.');
     },
     color: ''
   },
   loan_checklist_generated: {
     label: '',
-    icon: function (props: React.SVGProps<SVGSVGElement>): React.ReactNode {
+    icon: function (): React.ReactNode {
       throw new Error('Function not implemented.');
     },
     color: ''
